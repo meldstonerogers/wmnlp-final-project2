@@ -43,8 +43,8 @@ python3 --version
 
 ```
 ```
-python3 -m venv venv
-source venv/bin/activate
+python3 -m myenv myenv
+source myenv/bin/activate
 ```
 Create requirements.txt in the root project folder. 
 ```
@@ -69,7 +69,7 @@ Add .gitignore file to the root project folder if not already completed within r
 touch .gitignore
 ```
 Add the following to your .gitignore file: 
-- .venv/
+- .myenv/
 - .vscode/
 - .ipynb_checkpoints/
 
