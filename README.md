@@ -1,9 +1,15 @@
-# Final Project: Article Summarizer
+# WMNLP, Final Project: Article Summarizer
+Melissa Stone Rogers, December 1, 2024
 
+## Introduction
+Professional project using Jupyter Lab, requests, JSON, and basic NLP with spaCy. This project was created via a template of a repository provided by Northwest Missouri State University's School of Computer Science and Information Systems, [article-summarizer](https://github.com/wmnlp-materials/article-summarizer). 
+Commands were used on a Mac machine running zsh.  
+
+### Final Project
 Complete the tasks in the Python Notebook in this repository.
 Make sure to add and push the pkl or text file of your scraped html (this is specified in the notebook)
 
-## Rubric
+### Rubric
 
 * (Question 1) Article html stored in separate file that is committed and pushed: 1 pt
 * (Question 2) Polarity score printed with an appropriate label: 1 pt
@@ -23,3 +29,63 @@ Make sure to add and push the pkl or text file of your scraped html (this is spe
 * (Question 11) Number of sentences printed: 1 pt
 * (Question 12) Thoughtful answer based on reported polarity scores: 1 pt
 * (Question 13) Thoughtful answer based on summaries: 1 pt
+
+
+## How to Install and Run the Project
+Create project repository in Github and clone to your machine.
+
+```
+git clone project.url
+```
+Verify Python version of Python 3
+```
+python3 --version
+
+```
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+Create requirements.txt in the root project folder. 
+```
+touch requirements.txt
+```
+Install project dependencies dependent on your machine  
+```
+pip install jupyterlab 
+pip install -U pip setuptools wheel
+pip install -U spacy
+python -m spacy download en_core_web_sm
+pip install spacytextblob
+```
+## Freeze Dependencies 
+```
+python3 -m pip freeze > requirements.txt
+```
+
+## Add .gitignore File
+Add .gitignore file to the root project folder if not already completed within repository creation in GitHub.
+```
+touch .gitignore
+```
+Add the following to your .gitignore file: 
+- .venv/
+- .vscode/
+- .ipynb_checkpoints/
+
+## Initial Project Save
+```
+git add .
+git commit -m "initial"                         
+git push origin main
+```
+### Start and Complete Project 
+Follow instructions within the requests-json-nlp notebook file. Push updates to your GitHub periodically.  
+
+## Complete Your Project
+Save your project and push back to your repository. 
+```
+git add .
+git commit -m "final"                         
+git push origin master
+```
