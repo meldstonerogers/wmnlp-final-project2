@@ -93,5 +93,5 @@ Save your project and push back to your repository.
 ```zsh
 git add .
 git commit -m "final"                         
-git push origin master
+git push origin main
 ```
