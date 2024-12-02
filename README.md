@@ -33,48 +33,54 @@ Make sure to add and push the pkl or text file of your scraped html (this is spe
 
 ## How to Install and Run the Project
 Create project repository in Github and clone to your machine.
-
-```
+```zsh
 git clone project.url
 ```
-Verify Python version of Python 3
-```
-python3 --version
-
-```
-```
-python3 -m myenv myenv
-source myenv/bin/activate
-```
 Create requirements.txt in the root project folder. 
-```
+```zsh
 touch requirements.txt
 ```
-Install project dependencies dependent on your machine  
+Add the following to your requirements.txt
+- beautifulsoup4
+- html5lib
+- requests
+- spacy
+- spacytextblob
+- matplotlib
+
+Verify Python version of Python 3
+```zsh
+python3 --version
 ```
-pip install jupyterlab 
-pip install -U pip setuptools wheel
-pip install -U spacy
-python -m spacy download en_core_web_sm
-pip install spacytextblob
+
+Activate virtual environment. 
+```zsh
+python3 -m venv venv
+source venv/bin/activate
 ```
-## Freeze Dependencies 
+
+Install required packages and dependencies.
+```zsh
+pip install -r requirements.txt
 ```
+
+Freeze Dependencies 
+```zsh
 python3 -m pip freeze > requirements.txt
 ```
 
 ## Add .gitignore File
 Add .gitignore file to the root project folder if not already completed within repository creation in GitHub.
-```
+```zsh
 touch .gitignore
 ```
 Add the following to your .gitignore file: 
-- .myenv/
+- .venv/
 - .vscode/
 - .ipynb_checkpoints/
 
 ## Initial Project Save
-```
+```zsh
 git add .
 git commit -m "initial"                         
 git push origin main
@@ -84,7 +90,7 @@ Follow instructions within the requests-json-nlp notebook file. Push updates to 
 
 ## Complete Your Project
 Save your project and push back to your repository. 
-```
+```zsh
 git add .
 git commit -m "final"                         
 git push origin master
